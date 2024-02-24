@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../../partials/admin/head.ejs')%>
+<body>
+
+    <%- include('../../partials/admin/header.ejs')%>
+    <section id="main">
+        <div class="container">
+            <div class="row">
+                    <%- include('../../partials/admin/left.ejs')%>
+                <div class="col-md-9">
+                    <h2>Email Form </h2>
+                    <form action="" method="post">
+                        <label for="">To</label>
+                        <input type="text" name="emailto" id="" class="form-control" value="<%=data.email%>">
+                        <label for="">Form</label>
+                        <input type="text" name="emailform" id="" class="form-control" value="rohitkumawatt304@gmail.com">
+                        <label for="">Subject</label>
+                        <input type="text" name="subject" id="" class="form-control"
+                        value="Replay:<%=data.query%>">
+                        <label for="">body</label>
+                        <textarea name="body" id="" class="form-control"></textarea>
+
+
+                        <button class="btn btn-outline-danger form-control mt-2">send email</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

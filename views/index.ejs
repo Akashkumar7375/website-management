@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs')%>
+<body>
+    
+    <%- include('../partials/header.ejs')%>
+
+    <section id="banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h2 ><%=bannerData.title%></h2>
+                <p><%=bannerData.desc%></p>
+                
+               <p><a href="/user/bannerdetails"><button class="btn btn-success">more details</button></a></p>
+            </div>
+            <div class="col-md-4">
+                <img src="/upload/<%=bannerData.img%>" alt="" class="img-fluid d-flex mx-auto" id="banner-img">
+            </div>
+        </div>
+    </div>
+    <img src="/media/border1.png" alt="" class="img-fluid">
+    </section>
+    <section id="services">
+        <div class="container">
+            <h2 class="text-center">Services</h2>
+            <div class="row">
+
+                <%serviceData.forEach((value,key)=>{%>
+                <div class="col-md-3">
+                    <img src="/upload/<%=value.img%>" alt="" class="img-fluid d-flex
+                     mx-auto">
+                     <h3 class="text-center"><%=value.title%></h3>
+                    <p><%=value.desc%></p>
+                    <a href="/user/servicedetails/<%=value.id%>" ><i class="bi bi-arrow-right-circle-fill"></i></a>
+                </div>
+                <%})%>
+            </div>
+        </div>
+    </section>
+    <section id="testi">
+<div class="container">
+    <div class="row">
+        <h2 class="text-center">Testinominals</h2>
+        <%testinom.forEach((value,key)=>{%>
+            <div class="col-md-2">
+                <img src="/upload/<%=value.img%>" alt="" class="img-fluid d-flex mx-auto">
+                <p><i class="bi bi-quote"></i><%=value.desc%></i></p>
+                <h6><%=value.title%></h6>
+                <button class="btn btn-success form-control"><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i></button>
+            </div>
+        <%})%>    
+       
+        
+    </div>
+</div>
+    </section>
+    <%- include('../partials/footer.ejs')%>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

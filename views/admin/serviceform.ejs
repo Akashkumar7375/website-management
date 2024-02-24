@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../../partials/admin/head.ejs')%>
+<body>
+
+    <%- include('../../partials/admin/header.ejs')%>
+    <section id="main">
+        <div class="container">
+            <div class="row">
+                    <%- include('../../partials/admin/left.ejs')%>
+                <div class="col-md-9">
+                    <h2 class="text-center">Service Management Form</h2>
+                    <form action="" method="post" enctype="multipart/form-data">
+                        <label for="">Service Title</label>
+                        <input type="text" name="Stitle" id="" class="form-control">
+                        <label for="">Service Img</label>
+                        <input type="file" name="img" id="" class="form-control">
+                        <label for="">Service Description</label>
+                        <input type="text" name="Sdesc" id="" class="form-control">
+                        <label for="">Service More Details</label>
+                        <textarea name="Smdetails" id="" class="form-control"></textarea>
+
+                        <button type="submit" class="btn btn-success form-control mt-3">Add new Data</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

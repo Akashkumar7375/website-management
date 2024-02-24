@@ -1,0 +1,42 @@
+
+<html lang="en">
+    <%- include('../partials/head.ejs')%>
+<body>
+  
+
+    <%- include('../partials/header.ejs')%>
+    <section id="banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8"></div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+    <img src="/media/border1.png" alt="" class="img-fluid">
+    </section>
+    <section id="moredetails">
+         <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                   
+                          <h2 class="text-center">Testinominals</h2>
+                    <form action="/user/testinominalsform" method="post" enctype="multipart/form-data">
+                        <label for="">Testinominals title</label >
+                            <input type="text" name="Ttitle" id="" class="form-control"> 
+                        <label for="">Testinominals Description</label>
+                        <input type="text" name="Tdesc" id="" class="form-control">
+                        <label for="">Testinominals Img</label>
+                        <input type="file" name="img" id="" class="form-control">
+                        
+
+                        <button type="submit" class="btn btn-danger form-control mt-3">Add new Data</button>
+                    </form>
+                    
+                </div>
+            </div>
+         </div>
+    </section>
+   
+    <%- include('../partials/footer.ejs')%>
+</body>
+</html>

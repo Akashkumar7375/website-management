@@ -1,0 +1,34 @@
+#header{
+    background:linear-gradient(to right, rgb(3, 21, 61),rgb(68, 106, 242));
+}
+#header h1{
+    color: white;
+}
+#header button{
+    padding: 10px 20px;
+    float: right;
+    font-weight: 500;
+    margin-top: 3px;
+    font-size: 1.1rem;
+}
+table tr td img{
+    width: 70px;
+}
+#main .col-md-3{
+    border-right: 2px solid black;
+    height: 91vh;
+}
+#main h2{
+    text-align: center;
+    text-decoration:underline;
+}
+table th a{
+    color: black;
+
+}
+table #reply button{
+    background-color: #385ACF;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}

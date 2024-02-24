@@ -1,0 +1,13 @@
+#login h1{
+    color: red;
+    text-align: center;
+}
+#login button{
+    margin-top: 1rem;
+}
+
+#login{
+    display: flex;
+    align-items: center;
+    height: 90vh;
+}

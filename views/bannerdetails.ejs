@@ -1,0 +1,31 @@
+
+<html lang="en">
+    <%- include('../partials/head.ejs')%>
+<body>
+  
+
+    <%- include('../partials/header.ejs')%>
+    <section id="banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8"></div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+    <img src="/media/border1.png" alt="" class="img-fluid">
+    </section>
+    <section id="moredetails">
+         <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2><%=data.title%></h2>
+                    <p><%=data.mdetails%></p>
+                    
+                </div>
+            </div>
+         </div>
+    </section>
+   
+    <%- include('../partials/footer.ejs')%>
+</body>
+</html>

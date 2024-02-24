@@ -1,0 +1,155 @@
+*{
+    box-sizing: border-box;
+}
+.header{
+    background:linear-gradient(to right, rgb(3, 21, 61),rgb(68, 106, 242));
+    
+}
+
+#moredetails h2{
+    text-align: center;
+}
+#moredetails p{
+    text-align: justify;
+}
+.header .container-fluid{
+    padding: 0px 0px;
+}
+.header .col-md-12{
+    padding: 0px 0px;
+}
+.header .container{
+    padding: 0px 0px;
+}
+.header img{
+     width: 110px;
+     box-shadow: 1px 1px 10px black;
+    }
+    .header .navbar{
+        padding: 0px 0px;
+    }
+.navbar-toggler{
+        
+        color: white;
+       height: 50px;
+       width: 70px;
+       padding: 0px 0px;
+    }
+    .navbar-toggler i{
+        color: white !important;
+        font-size: 36px;
+        padding-right: 0px;
+    }
+    .navbar-toggler:focus{
+        color: white !important;
+        font-size: 36px;
+        padding-right: 10px;
+    }
+    .nav-link:focus, .nav-link:hover {
+    color: rgb(147, 158, 173);
+}
+    .header ul li a{
+       color:rgb(249, 250, 250) ;
+    }
+    #banner{
+        background:linear-gradient(to right, rgb(3, 21, 61),rgb(68, 106, 242));
+        padding-top: 20px ;
+    }
+    #banner  p{
+        color: white;
+        text-align: justify;
+    }
+    
+    #banner h2{
+        text-align: center;
+        font-weight: bold;
+        font-family: 'Handlee', cursive;
+        color: white;
+        font-size: 45px;
+    }
+   
+    #banner #banner-img{
+     width: 200px;
+     height: 30vh;
+     border-radius: 50%;
+    }
+    #services{
+        padding: 50px 0px;
+    }
+    #services a{
+        text-decoration: none;
+        color: black;
+    }
+    #services img{
+        width: 100px;
+        border-radius: 50%;
+    }
+    #services h2{
+        font-weight: bold;
+        font-family: 'Handlee', cursive;
+        font-size: 45px;
+    }
+    #services p{
+        text-align: justify;
+    }
+    #services i{
+       font-size: 40px;
+       display: flex;
+       justify-content: center;
+    }
+    #testi{
+        padding: 50px 0px;
+    }
+    #testi button i{
+        margin-right: 10px;
+        
+    }
+    #testi img{
+        width: 100px;
+        border-radius: 50%;
+    }
+    #testi h2{
+        font-weight: bold;
+        font-family: 'Handlee', cursive;
+        font-size: 45px;
+    }
+    #testi p{
+        text-align: justify;
+    }
+    #footer{
+        background:linear-gradient(to right, rgb(3, 21, 61),rgb(68, 106, 242));
+        padding-bottom: 20px;
+        
+    }
+    #footer .logo{
+        width: 110px;
+        
+    }
+    #footer img{
+        width: 60px;
+    }
+    #footer #banner-border{
+        width: 100%;
+    }
+    #footer #p{
+         text-align: justify;
+         color: white;
+    }
+    #footer table tr {
+        display: flex;
+
+    }
+    #footer h2{
+        color: white;
+        font-weight: bold;
+        font-family: 'Handlee', cursive;
+        font-size: 40px;
+    }
+    #footer table tr td {
+        text-align: justify;
+        color: white;
+    }
+    #footer table tr td i{
+        font-size: 24px;
+    }
+   

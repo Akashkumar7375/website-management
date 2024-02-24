@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../../partials/admin/head.ejs')%>
+<body>
+
+    <%- include('../../partials/admin/header.ejs')%>
+    <section id="main">
+        <div class="container">
+            <div class="row">
+                    <%- include('../../partials/admin/left.ejs')%>
+                <div class="col-md-9">
+                    <h2 class="text-center">Testinominals Management</h2>
+                    
+                    <table class="table">
+                        <tr>
+                            <td>Totale Testinominals <%=ttest%></td>
+                            <td>Published <%=Ptest%></td>
+                            <td>Unpublished <%=Utest%></td>
+                        </tr>
+                    </table>
+                    <form action="/admin/testinom/mssg" method="get">
+                        <label for="">Select On Status</label>
+                        <select class="form-select mb-3" name="search">
+                            <option  value="Published">Published Status</option>
+                            <option value="Unpublished">Unpublished Status</option>
+                        </select>
+                        <button type="submit" class="btn btn-warning form-control mb-3">Search</button>
+                    </form>
+
+                    <table class="table table-hover">
+                        <tr>
+                            <th>S.No</th>
+                            <th>Testinominals title</th>
+                            <th>Testinominals Description</th>
+                            <th>Testinominals Img</th>
+                            <th>PostDate</th>
+                            <th>Status</th>
+                        </tr>
+                        <%data.forEach((value,key)=>{%>
+                            <tr>
+                                <td><%=key+1%></td>
+                                <td><%=value.title%></td>
+                                <td><%=value.desc%></td>
+                                <td><img src="/upload/<%=value.img%>" alt=""></td>
+                                <td><%=value.postedDate%></td>
+                                <%if(value.status=='Unpublished'){%>
+                                <td><a href="/admin/testinomUpadate/<%=value.id%>/<%=value.status%>"> <button class="btn btn-danger"><%=value.status%></button></a></td>
+                                <%}else{%>
+
+                                    <td><a href="/admin/testinomUpadate/<%=value.id%>/<%=value.status%>"> <button class="btn btn-success"><%=value.status%></button></a></td>
+                                    <%}%>
+                            </tr>
+                        <%})%>
+
+                        <%if(!data.length){%>
+                            <tr>
+                             <td colspan="6"><h4 class="text-center">No Record Found</h4></td>
+                            </tr>
+                            <%}%>
+                    
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

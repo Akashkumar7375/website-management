@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../../partials/admin/head.ejs')%>
+<body>
+
+    <%- include('../../partials/admin/header.ejs')%>
+    <section id="main">
+        <div class="container">
+            <div class="row">
+                
+                    <%- include('../../partials/admin/left.ejs')%>
+                <div class="col-md-9">
+                    <h2 class="text-center">Service Management</h2>
+                    <table class="table ">
+                        <tr>
+                            <td>Total Srevices- <%=tservice%></td>
+                            <td>Published- <%=tpublished%></td>
+                            <td>Unpublished- <%=tunpublished%></td>
+                        </tr>
+                    </table>
+                    <form action="/admin/service/mssg" method="get">
+                        <label for="">Select On Status</label>
+                        <select class="form-select mb-3" name="search">
+                            <option  value="Published">Published Status</option>
+                            <option value="Unpublished">Unpublished Status</option>
+                        </select>
+                        <button type="submit" class="btn btn-warning form-control mb-3">Search</button>
+                    </form>
+                    <a href="/admin/serviceform/"><button class="btn btn-primary form-control">Add the new Service</button></a>
+                    <%if(message!='mssg' && message!='asc' && message!='desc'){%>
+                    <p><%=message%></p>
+                    <%}%>
+                      <table class="table table-hover">
+                        <tr>
+                            <th>S.NO.</th>
+                            <th>Service Title</th>
+                            <th>Service Img</th>
+                            <th>Service Description</th>
+                            <th>Service More Details</th>
+                            <th>PostDate
+                                <a href="/admin/service/asc"><i class="bi bi-caret-down-fill me-3"></i></a>
+                                <a href="/admin/service/desc"><i class="bi bi-caret-up-fill"></i></a>
+                            </th>
+                            <th>Status</th>
+                        </tr>
+
+                        <%data.forEach((value,key)=>{%>
+                       <tr>
+                        <td><%=key+1%></td>
+                        <td><%=value.title%></td>
+                        <td><img src="/upload/<%=value.img%>" alt="" style="width: 70px;"></td>
+                        <td><%=value.desc%></td>
+                        <td><%=value.moreDetails%></td>
+                        <td><%=value.postDate%></td>
+                        <%if(value.status=='Unpublished'){%>
+                            <td><a href="/admin/serviceUpdate/<%=value.id%>/<%=value.status%>"><Button class="btn btn-danger"><%=value.status%></Button></a></td>
+                        <%}else{%>
+                        <td><a href="/admin/serviceUpdate/<%=value.id%>/<%=value.status%>"><Button class="btn btn-success"><%=value.status%></Button></a></td>
+                        <%}%>
+                       </tr>
+                       <%})%>
+
+
+
+                       <%if(!data.length){%>
+                       <tr>
+                        <td colspan="6"><h4 class="text-center">No Record Found</h4></td>
+                       </tr>
+                       <%}%>
+                       
+                      </table>   
+                
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
