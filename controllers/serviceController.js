@@ -2,7 +2,7 @@ const serviceTable=require('../models/service')
 
 
 exports.services=async(req,res)=>{
-    console.log(req.query)
+    // console.log(req.query)
     const loginname=req.session.loginname
     const message=req.params.mssg
     if(message=='asc'){

@@ -23,6 +23,6 @@ server.use('/admin',adminRouter)
 server.use('/user',userRouter)
 server.use(express.static('public'))
 server.set('view engine','ejs')
-server.listen(8000,()=>{
+server.listen(5000,()=>{
    console.log('server is running on port 8000 ')
 })

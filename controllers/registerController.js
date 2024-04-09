@@ -23,7 +23,7 @@ if(usercheak!=null){
         req.session.isAuth=true
         req.session.loginname=us
 
-        console.log(req.session)
+       
         res.redirect('/admin/dashboord')
     }else{
         mssg='Passwod is not valid'
