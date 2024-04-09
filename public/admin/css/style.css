@@ -10,4 +10,29 @@
     display: flex;
     align-items: center;
     height: 90vh;
+    .back{
+        border: 2px solid rgb(235, 230, 230);
+        width: 80px;
+        margin-top: 10px;
+        display: flex;
+        border-radius: 5px;
+    }
+    .back:hover{
+        border: 2px solid rgb(46, 44, 44);
+        width: 80px;
+        margin-top: 10px;
+        display: flex;
+        border-radius: 5px;
+    }
+    i{
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: rgb(40, 39, 39);
+    }
+    .back span a{
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: rgb(46, 44, 44);
+        text-decoration: none;
+    }
 }
